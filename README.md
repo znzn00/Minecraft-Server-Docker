@@ -1,5 +1,5 @@
 # Minecraft-Server-Docker
-By default, it downloads 1.17.1 server on run.
+This is a simple docker container that runs a vanilla minecraft server. By default, on the first run it will download the jar for a server of Minecraft 1.17.1.
 ```docker
 docker pull znzn00/mcserver:latest
 ```
