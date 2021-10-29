@@ -5,18 +5,11 @@ docker pull znzn00/mcserver:latest
 ```
 Docker Repository: https://hub.docker.com/r/znzn00/mcserver
 <!--Github Repository: https://github.com/znzn00/Minecraft-Server-Docker -->
-## Environment variables
-| **Name**  | **Usage** |
+## Images
+| **Name**  | **Description** |
 | ------------- | ------------- |
-| MC_PORT  | Minecraft Server's port. |
-| RCON_PORT  | Minecraft Server's Rcon port. |
-| RCON_PASSWORD | Minecraft Server's Rcon password. |
-| SERVER_JAR | URL for a minecraft server jar. |
-| SERVER_MOTD | Minecraft Server's motd. |
-| MEMORY | Used for java memory arguments for server execution. |
-## How does it work?
-It executes the server with a bash, and in order to execute `stop` command, it needs a way to comunicate it, so I use rcon, using the client on: https://github.com/Tiiffi/mcrcon
-## Help
-### How to access the console of the Minecraft Server.
-While the container is running, execute `mcrcon -P <RCON_PORT> -p <RCON_PASSWORD>`, for example, using the default values:
-> `docker exec -it <Container Name> mcrcon -P 25575 -p 1234`
+| [latest](https://github.com/znzn00/Minecraft-Server-Docker/tree/latest)  | Have Rcon enabled by force, it doesn't stop well without it. |
+| [simple](https://github.com/znzn00/Minecraft-Server-Docker/tree/simple)  | It doesn't need Rcon, but it lacks a way to interact directly with the console, to send a command check on help. |
+
+## Description
+All images are made from azul/zulu-openjdk-alpine:17-jre
